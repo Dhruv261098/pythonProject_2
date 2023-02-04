@@ -20,6 +20,16 @@ for line in f:
         FailPeople.write(line)
 # Above command write each line which pass the condition in newly created file.
 
+#another way to write above two things is as below
+""""
+for line in f:
+    line_split= line.split()
+    if line_split[2] == 'P':
+        NewFile.write(line)
+    else:
+     FailPeople.write(line)
+
+"""
 
 f.close()
 NewFile.close()
