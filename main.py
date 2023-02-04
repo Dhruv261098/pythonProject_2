@@ -5,6 +5,7 @@ f = open('inputFile.txt','r')
 
 # here w represent we write in the file, this command will crate the NewFile
 NewFile = open('NewFile.txt','w')
+FailPeople = open('failPeople.txt', 'w')
 
 # here line, line_split & f are variables, split() is function
 # line.split() will split the line in 3 colums as you could define in the file (Name[0] number[1] P/F[2])
@@ -15,6 +16,11 @@ for line in f:
         NewFile.write(line)
 # Above command write each line which pass the condition in newly created file.
 
+    if line_split[2] == 'F':
+        FailPeople.write(line)
+# Above command write each line which pass the condition in newly created file.
+
 
 f.close()
 NewFile.close()
+FailPeople.close()
